@@ -40,6 +40,11 @@ public class ResultadosScript : MonoBehaviour
             txtpanel.text = "Resultado correcto";
 
         }
+        if (total.ToString() != txt.text.ToString() && txt.text != "") 
+        {
+            panel.SetActive(true);
+            txtpanel.text = "El resultado es incorrecto";
+        }
     }
     public void panelsinresultado()
     {
