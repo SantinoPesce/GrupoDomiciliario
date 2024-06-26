@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 88677898}
   - component: {fileID: 88677897}
   m_Layer: 5
-  m_Name: Text
+  m_Name: textpanelTXT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -818,7 +818,7 @@ GameObject:
   - component: {fileID: 452609724}
   - component: {fileID: 452609723}
   m_Layer: 5
-  m_Name: Boton
+  m_Name: BotonResponder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1235,7 +1235,7 @@ GameObject:
   - component: {fileID: 651635744}
   - component: {fileID: 651635743}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SumaPrecios
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1646,7 +1646,7 @@ GameObject:
   - component: {fileID: 1360648871}
   - component: {fileID: 1360648870}
   m_Layer: 5
-  m_Name: Button
+  m_Name: BotonCerrarPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2004,7 +2004,7 @@ GameObject:
   - component: {fileID: 1823413089}
   - component: {fileID: 1823413088}
   m_Layer: 5
-  m_Name: Text
+  m_Name: signosumaTXT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2119,7 +2119,7 @@ GameObject:
   - component: {fileID: 1903314174}
   - component: {fileID: 1903314173}
   m_Layer: 5
-  m_Name: Text
+  m_Name: RespuestaTXT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2169,7 +2169,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 1
