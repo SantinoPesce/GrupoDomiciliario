@@ -25,7 +25,7 @@ public class ObjetosSpawn : MonoBehaviour
     void Update()
     {
         txtDerecha.text = "$ " + Derecha[RD].GetComponent<ObjetoValueScript>().Value;
-        txtDerecha.text = "$ " + Izquierda[RI].GetComponent<ObjetoValueScript>().Value;
+        txtIzquierda.text = "$ " + Izquierda[RI].GetComponent<ObjetoValueScript>().Value;
     }
     public void Valores()
     {
