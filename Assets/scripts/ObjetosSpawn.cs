@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class objetosscript : MonoBehaviour
+public class ObjetosSpawn : MonoBehaviour
 {
+    public GameObject[] Derecha;
+    public GameObject[] Izquierda;
     // Start is called before the first frame update
     void Start()
     {
