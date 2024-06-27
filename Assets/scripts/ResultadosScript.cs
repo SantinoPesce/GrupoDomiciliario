@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ResultadosScript : MonoBehaviour
 {
     public GameObject panel;
+    public Text botonJugarOtraVez;
+    public Text botonSalir;
     public Text txt;
     public ObjetosSpawn objetospawn;
+    int total;
 
     public Text txtpanel;
 
@@ -15,8 +19,6 @@ public class ResultadosScript : MonoBehaviour
     void Start()
     {
         panel.SetActive(false);
-        
-        
     }
 
     // Update is called once per frame
@@ -26,28 +28,34 @@ public class ResultadosScript : MonoBehaviour
 
     public void botonpresionado()
     {
-      if (txt.text == "")
+        if (txt.text == "")
         {
             panel.SetActive(true);
             txtpanel.text = "Debes ingresar un resultado";
 
         }
-       
-     int total = objetospawn.Izquierda[objetospawn.RI].GetComponent<ObjetoValueScript>().Value + objetospawn.Derecha[objetospawn.RD].GetComponent<ObjetoValueScript>().Value;
+
+        total = objetospawn.Izquierda[objetospawn.RI].GetComponent<ObjetoValueScript>().Value + objetospawn.Derecha[objetospawn.RD].GetComponent<ObjetoValueScript>().Value;
         if (total.ToString() == txt.text.ToString())
         {
             panel.SetActive(true);
             txtpanel.text = "Resultado correcto";
+            botonJugarOtraVez.text = "Reiniciar desafio";
 
         }
-        if (total.ToString() != txt.text.ToString() && txt.text != "") 
+        if (total.ToString() != txt.text.ToString() && txt.text != "")
         {
             panel.SetActive(true);
             txtpanel.text = "El resultado es incorrecto";
+            botonJugarOtraVez.text = "Volver a intentarlo";
         }
     }
-    public void panelsinresultado()
+
+    public void JugarOtraVez()
     {
-        panel.SetActive(false);
+        if (total.ToString() == txt.text.ToString())
+        {
+            SceneManager.LoadScene("Scene1");
+        }
     }
 }
