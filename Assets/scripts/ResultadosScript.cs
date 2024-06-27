@@ -57,5 +57,14 @@ public class ResultadosScript : MonoBehaviour
         {
             SceneManager.LoadScene("Scene1");
         }
+        if (total.ToString() != txt.text.ToString() && txt.text != "")
+        {
+            panel.SetActive(false);
+        }
+    }
+
+    public void Salir()
+    {
+        SceneManager.LoadScene("SeleccionarJuegos");
     }
 }
