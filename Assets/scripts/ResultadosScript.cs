@@ -33,7 +33,7 @@ public class ResultadosScript : MonoBehaviour
 
         }
        
-     int total = objetospawn.Izquierda[objetospawn.RI].GetComponent<ObjetoValueScript>().Value + objetospawn.Derecha[objetospawn.RD].GetComponent<ObjetoValueScript>().Value;
+     int total = objetospawn.Izquierda[objetospawn.RI].GetComponent<ProductosScript>().Value + objetospawn.Derecha[objetospawn.RD].GetComponent<ProductosScript>().Value;
         if (total.ToString() == txt.text.ToString())
         {
             panel.SetActive(true);
