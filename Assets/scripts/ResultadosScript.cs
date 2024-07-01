@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class ResultadosScript : MonoBehaviour
 {
-    public GameObject panel;
+    public GameObject panelNotificaciones;
+    public GameObject panelError;
     public Text botonJugarOtraVez;
     public Text botonSalir;
     public Text txt;
@@ -14,11 +15,13 @@ public class ResultadosScript : MonoBehaviour
     int total;
 
     public Text txtpanel;
+    public Text txtpanelError;
 
     // Start is called before the first frame update
     void Start()
     {
-        panel.SetActive(false);
+        panelNotificaciones.SetActive(false);
+        panelError.SetActive(false);
     }
 
     // Update is called once per frame
@@ -30,22 +33,20 @@ public class ResultadosScript : MonoBehaviour
     {
         if (txt.text == "")
         {
-            panel.SetActive(true);
-            txtpanel.text = "Debes ingresar un resultado";
-
+            panelError.SetActive(true);
         }
 
         total = objetospawn.Izquierda[objetospawn.RI].GetComponent<ObjetoValueScript>().Value + objetospawn.Derecha[objetospawn.RD].GetComponent<ObjetoValueScript>().Value;
         if (total.ToString() == txt.text.ToString())
         {
-            panel.SetActive(true);
+            panelNotificaciones.SetActive(true);
             txtpanel.text = "Resultado correcto";
             botonJugarOtraVez.text = "Reiniciar desafio";
 
         }
         if (total.ToString() != txt.text.ToString() && txt.text != "")
         {
-            panel.SetActive(true);
+            panelNotificaciones.SetActive(true);
             txtpanel.text = "El resultado es incorrecto";
             botonJugarOtraVez.text = "Volver a intentarlo";
         }
@@ -59,12 +60,17 @@ public class ResultadosScript : MonoBehaviour
         }
         if (total.ToString() != txt.text.ToString() && txt.text != "")
         {
-            panel.SetActive(false);
+            panelNotificaciones.SetActive(false);
         }
     }
 
     public void Salir()
     {
         SceneManager.LoadScene("SeleccionarJuegos");
+    }
+
+    public void BotonError()
+    {
+        panelError.SetActive(false);
     }
 }
